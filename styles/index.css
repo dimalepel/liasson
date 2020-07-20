@@ -867,7 +867,26 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	border-radius: 50%;
-	background-image: url(../images/ico-guarantees.svg);
+}
+
+.stage-work__item--bell::before {
+    background-image: url("../images/ico-consultations.svg");
+}
+
+.stage-work__item--meeting::before {
+    background-image: url("../images/ico-guarantees.svg");
+}
+
+.stage-work__item--work::before {
+    background-image: url("../images/ico-work.svg");
+}
+
+.stage-work__item--signing::before {
+    background-image: url("../images/ico-signing.svg");
+}
+
+.stage-work__item--payment::before {
+    background-image: url("../images/ico-payment.svg");
 }
 
 .stage-work__item:not(:last-child)::after {
