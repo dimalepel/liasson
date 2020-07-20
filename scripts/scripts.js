@@ -14,19 +14,19 @@
                 slidesToShow: 4,
                 responsive: [
                     {
-                        breakpoint: 1025,
+                        breakpoint: 921,
                         settings: {
                             slidesToShow: 3
                         }
                     },
                     {
-                        breakpoint: 861,
+                        breakpoint: 640,
                         settings: {
                             slidesToShow: 2
                         }
                     },
                     {
-                        breakpoint: 501,
+                        breakpoint: 381,
                         settings: {
                             slidesToShow: 1
                         }
@@ -37,4 +37,28 @@
     }
     reviewsSlider('.js--reviews-slider');
 
+    // Открытие / закрытие мобильного меню
+    function openedMobileMenu(trigger, target, elSubMenu) {
+        $(trigger).click(function (event) {
+            $('.page__body').toggleClass('overflow');
+            $(this).toggleClass('active');
+            $(target).toggleClass('open');
+            $('.js--parent').removeClass('active');
+            $(elSubMenu).slideUp();
+            return false;
+        });
+    }
+    openedMobileMenu('.js--menu-trigger', '.js--navigation', '.js--child');
+
+    // Открытие / закрытие подменю
+    function openSubMenu(trigger, target, widthScreen) {
+        if($( document ).width() <= widthScreen) {
+            $(trigger).click(function (event) {
+                $(this).toggleClass('active');
+                $(target).slideToggle();
+                return false;
+            });
+        }
+    }
+    openSubMenu('.js--parent', '.js--child', 1024);
 })();
