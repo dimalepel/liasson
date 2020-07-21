@@ -256,16 +256,10 @@
 	list-style: none;
 }
 
-@media (max-width:1024px) {
-	.messengers {
-		margin-right: 0;
-	}
-}
-
-@media (max-width:800px) {
-	.messengers {
-		display: none;
-	}
+@media (max-width: 1070px) {
+    .messengers {
+        display: none;
+    }
 }
 
 .messenger__item:not(:last-child) {
@@ -277,6 +271,12 @@
 	margin-bottom: 22px;
 	font-size: 15px;
 	line-height: 21px;
+}
+
+@media (max-width: 1070px) {
+    .work-schedule {
+        margin-left: 20px;
+    }
 }
 
 @media (max-width:1024px) {
